@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<DigitalPianism_ReviewCaptcha>
+			<version>0.1.0</version>
+		</DigitalPianism_ReviewCaptcha>
+	</modules>
+	
+	<global>
+		<models>
+			<reviewcaptcha>
+				<class>DigitalPianism_ReviewCaptcha_Model</class>
+			</reviewcaptcha>
+		</models>
+		<events>
+			<controller_action_predispatch_review_product_post>
+				<observers>
+					<digitalpianism_reviewcaptcha_check>
+						<class>reviewcaptcha/observer</class>
+						<method>checkReviewCaptcha</method>
+					</digitalpianism_reviewcaptcha_check>
+				</observers>
+			</controller_action_predispatch_review_product_post>
+		</events>
+    </global>
+	
+	<frontend>
+        <layout>
+            <updates>
+                <review_captcha>
+                    <file>digitalpianism/reviewcaptcha.xml</file>
+                </review_captcha>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+		<!-- Required for the in built Magento Captcha -->
+		<captcha>
+			<frontend>
+				<areas>
+					<review_captcha>
+						<label>Product Review Form</label>
+					</review_captcha>
+				</areas>
+			</frontend>
+		</captcha>
+		<customer>
+			<captcha>
+				<always_for>
+					<review_captcha>1</review_captcha>
+				</always_for>
+			</captcha>
+		</customer>
+	</default>
+</config>

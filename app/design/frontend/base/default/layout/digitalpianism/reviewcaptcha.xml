@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+	<review_product_list>
+		<reference name="head">
+			<action method="addJs"><file>mage/captcha.js</file></action>
+		</reference>
+		
+		<reference name="product.review.form">
+			<!-- Add the Magento Captcha -->
+			<block type="core/text_list" name="form.additional.info">
+				<block type="captcha/captcha" name="captcha">
+					<action method="setFormId"><formId>review_captcha</formId></action>
+					<action method="setImgWidth"><width>230</width></action>
+					<action method="setImgHeight"><height>50</height></action>
+				</block>
+			</block>
+		</reference>
+	</review_product_list>
+
+</layout>

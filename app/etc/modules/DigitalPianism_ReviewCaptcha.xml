@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <DigitalPianism_ReviewCaptcha>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Review/>
+            </depends>
+        </DigitalPianism_ReviewCaptcha>
+    </modules>
+</config>
