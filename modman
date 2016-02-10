@@ -1,3 +1,4 @@
-app/code/community/DigitalPianism/ReviewCaptcha        app/code/community/DigitalPianism/ReviewCaptcha       
-app/design/frontend/base/default/layout/digitalpianism app/design/frontend/base/default/layout/digitalpianism
-app/etc/modules/DigitalPianism_ReviewCaptcha.xml       app/etc/modules/DigitalPianism_ReviewCaptcha.xml      
+# DigitalPianism_ReviewCaptcha
+app/code/community/DigitalPianism/ReviewCaptcha                     app/code/community/DigitalPianism/ReviewCaptcha
+app/design/frontend/base/default/layout/digitalpianism/reviewcaptch app/design/frontend/base/default/layout/digitalpianism
+app/etc/modules/DigitalPianism_ReviewCaptcha.xml                    app/etc/modules/DigitalPianism_ReviewCaptcha.xml
